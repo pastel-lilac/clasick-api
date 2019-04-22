@@ -1,0 +1,5 @@
+env DB_VENDOR="mysql"
+env USER="clasick"
+env PASS="clasick"
+env PROTOCOL="tcp(127.0.0.1:3306)"
+env DBNAME="clasick"
