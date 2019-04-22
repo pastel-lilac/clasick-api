@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302797c4-28e8-4454-879b-a56dbc2b6ad9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Clasick-Core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tozastation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/usecase/user_usecase.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/repository/user_repository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/service/user_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idl/common.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idl/music.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idl/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/persistence/model/db/base.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/persistence/model/db/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/persistence/repository/user_repository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/handler/di/di.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/handler/gorm/gorm.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/util/guid/guid.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/util/hash/hash.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/util/jwt/claim.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/util/jwt/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protoc-gen.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/set-env.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/persistence/model/db/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/persistence/model/db/user.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/handler/gorm/gorm.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+            <state relative-caret-position="441">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="e#14#86#0" expanded="true" />
               </folding>
@@ -85,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/infrastructure/persistence/repository/user_repository.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -98,6 +74,15 @@
               <folding>
                 <element signature="e#12#107#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/infrastructure/persistence/model/db/user.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -153,7 +138,6 @@
         <option value="$PROJECT_DIR$/protoc-gen.sh" />
         <option value="$PROJECT_DIR$/idl/common.proto" />
         <option value="$PROJECT_DIR$/infrastructure/persistence/model/db/base.go" />
-        <option value="$PROJECT_DIR$/infrastructure/persistence/model/db/user.go" />
         <option value="$PROJECT_DIR$/interface/util/jwt/claim.go" />
         <option value="$PROJECT_DIR$/interface/util/hash.go" />
         <option value="$PROJECT_DIR$/interface/util/hash/hash.go" />
@@ -169,6 +153,7 @@
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/infrastructure/persistence/repository/user_repository.go" />
         <option value="$PROJECT_DIR$/interface/handler/gorm/gorm.go" />
+        <option value="$PROJECT_DIR$/infrastructure/persistence/model/db/user.go" />
       </list>
     </option>
   </component>
@@ -318,7 +303,7 @@
     <frame x="-1920" y="-280" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17944622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17944622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -331,7 +316,7 @@
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32934132" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28443113" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28443113" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -378,13 +363,6 @@
           <folding>
             <element signature="e#12#48#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/infrastructure/persistence/model/db/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -487,7 +465,7 @@
     <entry file="file://$PROJECT_DIR$/infrastructure/persistence/repository/user_repository.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -503,11 +481,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/handler/gorm/gorm.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+        <state relative-caret-position="441">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="e#14#86#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/infrastructure/persistence/model/db/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
         </state>
       </provider>
     </entry>
