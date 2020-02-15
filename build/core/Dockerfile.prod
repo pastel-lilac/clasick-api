@@ -1,0 +1,17 @@
+# Build Container
+FROM golang:latest as builder
+WORKDIR /clasick-api
+COPY . .
+# Set Environment Variable
+ENV CGO_ENABLED=0
+ENV GOOS=linux
+ENV GOARCH=amd64
+# Build
+RUN go build -o /go/bin/core ./cmd/core
+
+# Runtime Container
+FROM alpine
+RUN apk add --no-cache ca-certificates
+COPY --from=builder /go/bin/core /core
+EXPOSE 3000
+ENTRYPOINT ["/core"]
