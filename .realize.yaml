@@ -1,0 +1,25 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+  - name: core
+    path: .
+    commands:
+      install:
+        status: true
+        dir: cmd/core
+      run:
+        status: true
+        method: /go/bin/core
+    watcher:
+      extensions:
+        - go
+      paths:
+        - /
+      ignored_paths:
+        - .git
+        - .idea
+        - configs
+        - scripts
+        - deployments

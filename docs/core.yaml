@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Clasick-Core
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/albums/{album_id}':
+    parameters:
+      - schema:
+          type: string
+        name: album_id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-albums-album_id
+components:
+  schemas:
+    Genre:
+      title: Genre
+      type: object
+      x-examples:
+        example-1: {}
+      properties:
+        id:
+          type: integer
+        '':
+          type: string
+    Music:
+      title: Music
+      type: object
+      properties:
+        id:
+          type: integer
+        '':
+          type: string
+        jacket_photo:
+          type: string
+    Album:
+      title: Album
+      type: object
+      properties:
+        id:
+          type: string
+    Artist:
+      title: Artist
+      type: object
+      properties:
+        id:
+          type: string
