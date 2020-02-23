@@ -2,10 +2,15 @@ syntax = 'proto3';
 
 package v1alpha;
 option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/album/v1alpha";
+import "graphql-gateway/graphql.proto";
 import "common/v1alpha/common.proto";
 
 service AlbumRPC {
-    rpc GetArtistAlbums(GetArtistAlbumsRequest) returns (AlbumResponse) {}
+    rpc GetArtistAlbums(GetArtistAlbumsRequest) returns (AlbumResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getArtistAlbums"
+        };
+    }
     // --- For Admin --- //
     //rpc AddAlbumForAdmin() returns () {}
     //rpc UpdateAlbumForAdmin() returns () {}

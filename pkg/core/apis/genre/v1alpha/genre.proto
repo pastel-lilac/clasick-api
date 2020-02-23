@@ -4,9 +4,14 @@ package v1alpha;
 option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/genre/v1alpha";
 import "google/protobuf/timestamp.proto";
 import "common/v1alpha/common.proto";
+import "graphql-gateway/graphql.proto";
 
 service GenreRPC {
-    rpc GetGenres(GetGenresRequest) returns (GenreResponse) {}
+    rpc GetGenres(GetGenresRequest) returns (GenreResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getGenres"
+        };
+    }
     // --- For Admin --- //
     //rpc AddMusicForAdmin() returns () {}
     //rpc UpdateMusicForAdmin() returns () {}

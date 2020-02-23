@@ -4,11 +4,24 @@ package v1alpha;
 option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/music/v1alpha";
 import "google/protobuf/timestamp.proto";
 import "common/v1alpha/common.proto";
+import "graphql-gateway/graphql.proto";
 
 service MusicRPC {
-    rpc GetArtistMusics(GetArtistMusicsRequest) returns (MusicResponse) {}
-    rpc GetAlbumMusics(GetAlbumMusicsRequest) returns (MusicResponse) {}
-    rpc GetPlaylistMusics(GetPlaylistMusicsRequest) returns (MusicResponse) {}
+    rpc GetArtistMusics(GetArtistMusicsRequest) returns (MusicResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getArtistMusics"
+        };
+    }
+    rpc GetAlbumMusics(GetAlbumMusicsRequest) returns (MusicResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getAlbumMusics"
+        };
+    }
+    rpc GetPlaylistMusics(GetPlaylistMusicsRequest) returns (MusicResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getPlaylistMusics"
+        };
+    }
     // --- For Admin --- //
     //rpc AddMusicForAdmin() returns () {}
     //rpc UpdateMusicForAdmin() returns () {}

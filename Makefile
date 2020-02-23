@@ -20,8 +20,8 @@ ps-dev:
 	sudo docker-compose -f $(DOCKER_COMPOSE_DEV_PATH) ps
 gen-proto:
 	protoc -I $(BASE_PROTO_PATH) $(COMMON_PROTO_PATH)/common.proto --go_out=plugins=grpc:$(GOPATH)/src
-	protoc -I $(BASE_PROTO_PATH) $(MUSIC_PROTO_PATH)/music.proto --go_out=plugins=grpc:$(GOPATH)/src
-	protoc -I $(BASE_PROTO_PATH) $(ARTIST_PROTO_PATH)/artist.proto --go_out=plugins=grpc:$(GOPATH)/src
-	protoc -I $(BASE_PROTO_PATH) $(ALBUM_PROTO_PATH)/album.proto --go_out=plugins=grpc:$(GOPATH)/src
-	protoc -I $(BASE_PROTO_PATH) $(GENRE_PROTO_PATH)/genre.proto --go_out=plugins=grpc:$(GOPATH)/src
-	protoc -I $(BASE_PROTO_PATH) $(PLAYLIST_PROTO_PATH)/playlist.proto --go_out=plugins=grpc:$(GOPATH)/src
+	protoc -I $(BASE_PROTO_PATH) $(MUSIC_PROTO_PATH)/music.proto --go_out=plugins=grpc:$(GOPATH)/src --graphql-gateway_out=$(BASE_PROTO_PATH)
+	protoc -I $(BASE_PROTO_PATH) $(ARTIST_PROTO_PATH)/artist.proto --go_out=plugins=grpc:$(GOPATH)/src --graphql-gateway_out=$(BASE_PROTO_PATH)
+	protoc -I $(BASE_PROTO_PATH) $(ALBUM_PROTO_PATH)/album.proto --go_out=plugins=grpc:$(GOPATH)/src --graphql-gateway_out=$(BASE_PROTO_PATH)
+	protoc -I $(BASE_PROTO_PATH) $(GENRE_PROTO_PATH)/genre.proto --go_out=plugins=grpc:$(GOPATH)/src --graphql-gateway_out=$(BASE_PROTO_PATH)
+	protoc -I $(BASE_PROTO_PATH) $(PLAYLIST_PROTO_PATH)/playlist.proto --go_out=plugins=grpc:$(GOPATH)/src --graphql-gateway_out=$(BASE_PROTO_PATH)

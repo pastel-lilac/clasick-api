@@ -4,9 +4,14 @@ package v1alpha;
 option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/artist/v1alpha";
 import "google/protobuf/timestamp.proto";
 import "common/v1alpha/common.proto";
+import "graphql-gateway/graphql.proto";
 
 service ArtistRPC {
-    rpc GetArtistsByGenre(GetArtistsByGenreRequest) returns (ArtistResponse) {}
+    rpc GetArtistsByGenre(GetArtistsByGenreRequest) returns (ArtistResponse) {
+        option (grpc_custom.graphql.schema) = {
+            query: "getArtistsByGenre"
+        };
+    }
     // --- For Admin --- //
     //rpc AddArtistForAdmin() returns () {}
     //rpc UpdateArtistForAdmin() returns () {}
