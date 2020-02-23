@@ -1,0 +1,35 @@
+syntax = 'proto3';
+
+package v1alpha;
+option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/playlist/v1alpha";
+import "google/protobuf/timestamp.proto";
+import "common/v1alpha/common.proto";
+
+service MusicRPC {
+    rpc GetPlaylistsByGenre(GetPlaylistsRequest) returns (PlaylistResponse) {}
+    rpc GetMyPlaylists(GetMyPlaylistsRequest) returns (PlaylistResponse) {}
+    // --- For Admin --- //
+    //rpc AddMusicForAdmin() returns () {}
+    //rpc UpdateMusicForAdmin() returns () {}
+    //rpc DeleteMusicForAdmin() returns () {}
+}
+
+message Playlist {
+    uint32 id = 1;
+    string name = 2;
+    string jacket_photo = 3;
+    google.protobuf.Timestamp created_date = 4;
+    google.protobuf.Timestamp updated_date = 5;
+}
+
+message PlaylistResponse {
+    repeated Playlist playlists = 1;
+}
+// --- [GET] /playlists --- //
+message GetPlaylistsRequest {
+    MustField field = 1;
+}
+// --- [GET] /playlists/me --- //
+message GetMyPlaylistsRequest {
+    MustField field = 1;
+}

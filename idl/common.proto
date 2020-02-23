@@ -1,4 +1,0 @@
-package common;
-option go_package = "github.com/tozastation/clasick-core/interface/rpc/common";
-
-message Empty {}

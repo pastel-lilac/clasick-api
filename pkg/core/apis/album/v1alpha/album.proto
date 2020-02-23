@@ -1,0 +1,29 @@
+syntax = 'proto3';
+
+package v1alpha;
+option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/album/v1alpha";
+import "common/v1alpha/common.proto";
+
+service AlbumRPC {
+    rpc GetArtistAlbums(GetArtistAlbumsRequest) returns (AlbumResponse) {}
+    // --- For Admin --- //
+    //rpc AddAlbumForAdmin() returns () {}
+    //rpc UpdateAlbumForAdmin() returns () {}
+    //rpc DeleteAlbumForAdmin() returns () {}
+}
+
+message Album {
+    uint32 id = 1;
+    string name = 2;
+    string jacket_photo = 3;
+}
+
+message AlbumResponse {
+    repeated Album albums = 1;
+}
+
+// --- [GET] /albums/:artist_id --- //
+message GetArtistAlbumsRequest {
+    MustField field = 1;
+    uint32 artist_id = 2;
+}
