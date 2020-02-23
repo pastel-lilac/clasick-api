@@ -1,0 +1,28 @@
+syntax = 'proto3';
+
+package v1alpha;
+option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/genre/v1alpha";
+import "google/protobuf/timestamp.proto";
+import "common/v1alpha/common.proto";
+
+service GenreRPC {
+    rpc GetGenres(GetGenresRequest) returns (GenreResponse) {}
+    // --- For Admin --- //
+    //rpc AddMusicForAdmin() returns () {}
+    //rpc UpdateMusicForAdmin() returns () {}
+    //rpc DeleteMusicForAdmin() returns () {}
+}
+
+message Genre {
+    uint32 id = 1;
+    string name = 2;
+    string jacket_photo = 3;
+}
+
+message GenreResponse {
+    repeated Genre genres = 1;
+}
+// --- [GET] /genres --- //
+message GetGenresRequest {
+    MustField field = 1;
+}

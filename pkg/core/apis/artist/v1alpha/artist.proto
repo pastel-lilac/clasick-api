@@ -1,0 +1,31 @@
+syntax = 'proto3';
+
+package v1alpha;
+option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/artist/v1alpha";
+import "google/protobuf/timestamp.proto";
+import "common/v1alpha/common.proto";
+
+service ArtistRPC {
+    rpc GetArtistsByGenre(GetArtistsByGenreRequest) returns (ArtistResponse) {}
+    // --- For Admin --- //
+    //rpc AddArtistForAdmin() returns () {}
+    //rpc UpdateArtistForAdmin() returns () {}
+    //rpc DeleteArtistForAdmin() returns () {}
+}
+
+message Artist {
+    uint32 id = 1;
+    string name = 2;
+    string jacket_photo = 3;
+    google.protobuf.Timestamp debut_date = 4;
+}
+
+message ArtistResponse {
+    repeated Artist artists = 1;
+}
+
+// --- [GET] /artists/:genre_id --- //
+message GetArtistsByGenreRequest {
+    MustField field = 1;
+    uint32 genre_id = 2;
+}

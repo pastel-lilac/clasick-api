@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+package v1alpha;
+option go_package = "github.com/pastel-lilac/clasick-api/pkg/core/apis/common/v1alpha";
+
+enum Role {
+    GUEST = 0;
+    MEMBER = 1;
+    ADMIN = 2;
+}
+
+message UserRole {
+    Role role = 1;
+}
+
+message MustField {
+    string token = 1;
+}
